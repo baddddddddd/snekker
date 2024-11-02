@@ -14,6 +14,8 @@ const concepts = [
     "for-loops",
     "foreach-loops",
     "functions",
+    "arrays",
+    "strings",
 ]
 
 const languages = {

@@ -40,35 +40,6 @@ const CodeBlock = ({ code, language }) => {
   );
 };
 
-export function Code({ code, language }) {
-  useEffect(() => {
-    Prism.highlightAll();
-  }, []);
-
-  const language_names = {
-    "c": "C",
-    "cpp": "C++",
-    "csharp": "C#",
-    "java": "Java",
-    "javascript": "JavaScript",
-    "python": "Python",
-  }
-
-  return (
-    // <div className="Code">
-    //   <pre>
-    //     <code className={`language-${language}`}>{code}</code>
-    //   </pre>
-    // </div>
-    <div className="code-display">
-      <h2>{language_names[language]}</h2>
-      <pre>
-        <code className={`language-${language}`}>{code}</code>
-      </pre>
-    </div>
-  );
-}
-
 function App() {
   const [selectedConcept, setSelectedConcept] = useState("variables");
   const [selectedLanguage1, setSelectedLanguage1] = useState("python");
@@ -89,7 +60,7 @@ function App() {
   return (
     
     <div className="App">
-      <h1>Code Snippet Viewer</h1>
+      <h1>Code Snippets</h1>
 
       {/* Concept Dropdown */}
       <label>
@@ -101,6 +72,8 @@ function App() {
           <option value="for-loops">For Loops</option>
           <option value="foreach-loops">For-Each Loops</option>
           <option value="functions">Functions</option>
+          <option value="arrays">Arrays</option>
+          <option value="strings">Strings</option>
         </select>
       </label>
 
