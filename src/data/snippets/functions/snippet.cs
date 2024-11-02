@@ -7,4 +7,7 @@ double CalculateCircleArea(double radius) {
 }
 
 double radius = 5.0;  // Circle radius
-Console.WriteLine($"Area: {CalculateCircleArea(radius):F2}");
+double area = CalculateCircleArea(radius);
+
+// Print area with two decimal places
+Console.WriteLine($"Area: {area:F2}");

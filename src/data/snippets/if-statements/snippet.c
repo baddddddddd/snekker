@@ -1,12 +1,26 @@
 #include <stdio.h>
 
-// Function to calculate the area of a circle
-float calculateCircleArea(float radius) {
-    return 3.14159f * (radius * radius); // Area formula
-}
-
 int main() {
-    float radius = 5.0f; // Circle radius
-    printf("The area of the circle with radius %.2f is %.2f\n", radius, calculateCircleArea(radius));
+    // Identify age group
+    int age = 22;
+
+    if (age <= 12) {
+        puts("You're a kid!");
+
+    } else if (age <= 18) {
+        puts("You're a teen!");
+
+    } else if (age <= 60) {
+        if (age <= 25) {
+            puts("You're a young adult!");
+        
+        } else {
+            puts("You're an adult!");
+        }
+    
+    } else {
+        puts("You're old!");
+    }
+
     return 0;
 }
